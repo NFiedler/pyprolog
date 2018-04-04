@@ -22,5 +22,10 @@ class Prolog:
             self.consult(arg)
 
     def consult(self, arg):
-        self._instance.sendline('consult(' + arg + ').\r')
+        self._instance.sendline('consult({}).\r'.format(arg))
 
+    def asserta(self, arg):
+        self.instance.sendline('asserta({}).\r'.format(arg))
+
+    def assertz(self, arg):
+        self.instance.sendline('assertz({}).\r'.format(arg))
